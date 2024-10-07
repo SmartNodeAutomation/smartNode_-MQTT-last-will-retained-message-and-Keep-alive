@@ -23,7 +23,7 @@ class MQTTService extends EventEmitter {
       }
 
       this.mqttClient = mqtt.connect(this.host, {
-        // keepalive: 6000,
+        keepalive: 60,
         protocolId: "MQTT",
         protocolVersion: 4,
         clean: true,
